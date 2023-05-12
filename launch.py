@@ -9,7 +9,7 @@ import argparse
 import subprocess
 import logging
 import json
-test3 stc branch
+t2 stc branch
 BYTE_MLPERF_ROOT = os.path.dirname(os.path.abspath(__file__))
 os.chdir(BYTE_MLPERF_ROOT)
 sys.path.insert(0, BYTE_MLPERF_ROOT)
