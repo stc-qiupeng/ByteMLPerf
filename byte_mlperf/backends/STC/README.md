@@ -10,6 +10,7 @@
 | bert-torch-fp32 | 807.89 | Open Squad 1.1 | F1 Score | 86.14 |
 | resnet50-tf-fp32 | 8728.8 | Open ImageNet | Top-1 | 77.24% |
 | widedeep-tf-fp32 | 2418915.33 | Open Criteo Kaggle | Top-1 | 77.39% |
+| widedeep-tf-fp32 | 2418915.33 | Open Criteo Kaggle | Top-1 | 77.39% |
 
 
 For more detailed result information, see byte_mlperf/reports/STC/. Above model inference based on the chip named "STC P920" and the following software.
