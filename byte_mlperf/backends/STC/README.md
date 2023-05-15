@@ -48,6 +48,6 @@ We can use the AI compiler(TensorTurbo) to convert the deep learning model into 
 We have supported over 150 open source models(application fields include CV, NLP, recommendation, speech, OCR, multimodel), over 160 operations, and four deep learning frameworks including tensorflow 1.x and 2.x, pytorch, onnx, paddlepaddle. Most of models can achieve 2x T4 performance.
 
 
-# Contract us
+# Contact us
 If you are interested in further information about the product, please contact the email: johnson@streamcomputing.com
 
