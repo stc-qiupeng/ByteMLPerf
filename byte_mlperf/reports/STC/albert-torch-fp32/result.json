@@ -21,9 +21,9 @@
     "Performance": [
         {
             "BS": 4,
-            "AVG_Latency": 38.81344,
-            "P99_Latency": 39.76143,
-            "QPS": 824.4920000000001
+            "AVG_Latency": 38.81,
+            "P99_Latency": 39.76,
+            "QPS": 824.49
         }
     ]
 }
