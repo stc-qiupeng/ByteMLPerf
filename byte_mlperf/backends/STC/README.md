@@ -42,6 +42,17 @@ Beijing Stream Computing Technology Co., LTD, we are committed to providing clou
 
 The first-generation chip achieves 128 TFLOPS in semi-precision floating-point operations, twice as big as T4. At present, the first-generation has been mass production capacity, and has completed small batch shipments to users. The second-generation chip is coming soon. 
 
+# The technical specifications of the first-generation chip
+| Name  | Value |
+| :-----:| :----: |
+| AI Computational power | fp16: 128 TFLOPS |
+| Memory Type | LPDDR4X  |
+| Memory Capacity | 16GB  |
+| Memory Bandwidth | 119.4GB/S  |
+| PCIe Interface | PCI Express 4.0 x 16, support Lane Reversal  |
+| Power Consumption | 160W |
+| Structural Dimension | 268.44mm x 111.15mm |
+
 # What we can do
 We can use the AI compiler(TensorTurbo) to convert the deep learning model into an object file that can be executed on an NPU, with many accelerated optimizations involved in the conversion process, then feed input data, execute the object file on the NPU device, get the model result.
 
