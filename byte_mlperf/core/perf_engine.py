@@ -208,6 +208,7 @@ class PerfEngine:
         # test numeric
         if workload['test_numeric']:
             log.info("******************************************* Running Numeric Checker... *******************************************")
+
             dataset.rebatch(self.runtime_backend.get_loaded_batch_size())
             if not workload['test_accuracy']:
                 accuracy_results = AccuracyChecker.calculate_acc(
