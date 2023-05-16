@@ -14,16 +14,15 @@
 | widedeep-tf-fp32 | 2395899.9 | Open Criteo Kaggle | Top-1 | 77.39% |
 
 
-For more detailed result information, see byte_mlperf/reports/STC/. Above model inference based on the chip named "STC P920" and the following software.
+For more detailed result information, see byte_mlperf/reports/STC/. Models above are depolyed on a NPU (Neural-network Processing Unit) card "STCP920" which is designed and manufactured by Beijing Stream Computing Technology Co., LTD. Softwares associated with STCP920 are as following: 
 
 | Software | Version | Description |
 | :-----:| :----: | :----: |
 | HPE | 1.5.1 | Heterogeneous Programming Environment |
-| TB | 1.11.0 | TensorTurbo, AI compiler developed based on TVM |
-| STC_DDk | 1.1.0 | Model compilation and deployment tools developed based on TensorTurbo |
+| TensorTurbo | 1.11.0 | An AI compiler for STCP920 developed based on TVM |
+| STC_DDK | 1.1.0 | Deploy Development Kits for STCP920, which includes AI Convertor, AI Executor, and utilities used in model conversion. |
 
-
-In addition to the above software, we have developed some very useful NPU(Neural-network Processing Unit) tools for monitoring the status of hardware and software, debugging bugs, analyzing accuracy and performance, as follows.
+In addition, a variety of tools for monitoring status of NPU devices, debugging heterogeneous programs, and analyzing accuracy and performance of NPU programs are provieded. 
 
 | Software  | Description |
 | :-----:| :----: |
@@ -31,16 +30,13 @@ In addition to the above software, we have developed some very useful NPU(Neural
 | stc-gdb | Stream Computing Debugger for debugging heterogeneous NPU programs  |
 | stc-prof | Stream Computing Profiler, for performance analysis and optimization of heterogeneous programs  |
 | stc-hpaa | Stream Computing Half-Precision Accuracy Analysis, for locating the calculation error location and corresponding data  |
-| ScheduleViewer | For parsing Relay IR, exporting in JSON format so that it can be opened with Netron to view graph structure  |
 
-
-See the link for more detailed software information: https://docs.streamcomputing.com/zh/latest/
-
+For more detailed software information, please refer to: https://docs.streamcomputing.com/zh/latest/ 
 
 # Company introduction
-Beijing Stream Computing Technology Co., LTD, we are committed to providing cloud service manufacturers with high cost performance and high versatility of AI accelerated chips.
+Beijing Stream Computing Technology Co., LTD, is committed to providing cloud service manufacturers with high cost performance and high versatility of AI accelerated chips. 
 
-The first-generation chip achieves 128 TFLOPS in semi-precision floating-point operations, twice as big as T4. At present, the first-generation has been mass production capacity, and has completed small batch shipments to users. The second-generation chip is coming soon. 
+The first-generation chip achieves 128 TFLOPS in semi-precision floating-point operations, twice as big as T4. At present, the first-generation NPU card 'STCP920' is in mass production, and has completed a batch of shipments to users. The second-generation products are in schedule and will be coming soon in 2023. 
 
 # The technical specifications of the first-generation chip
 | Name  | Value |
@@ -48,17 +44,19 @@ The first-generation chip achieves 128 TFLOPS in semi-precision floating-point o
 | AI Computational power | fp16: 128 TFLOPS |
 | Memory Type | LPDDR4X  |
 | Memory Capacity | 16GB  |
-| Memory Bandwidth | 119.4GB/S  |
+| Memory Bandwidth | 119.4GB/S |
 | PCIe Interface | PCI Express 4.0 x 16, support Lane Reversal  |
 | Power Consumption | 160W |
-| Structural Dimension | 268.44mm x 111.15mm |
+| Structural Dimension | 268.44mm x 111.15mm, single slot |
 
-# What we can do
-We can use the AI compiler(TensorTurbo) to convert the deep learning model into an object file that can be executed on an NPU, with many accelerated optimizations involved in the conversion process, then feed input data, execute the object file on the NPU device, get the model result.
+# What we have done
 
-We have supported over 150 open source models(application fields include CV, NLP, recommendation, speech, OCR, multimodel), over 160 operations, and four deep learning frameworks including tensorflow 1.x and 2.x, pytorch, onnx, paddlepaddle. Most of models can achieve 2x T4 performance.
+We provide development kits to support converting any deep learning model into an stc engine deploying it on a CPU+NPU server. 
 
+An AI compiler(TensorTurbo) is developed to convert certain part of a deep learning model into an NPU-executable file. The AI compiler employs a series of transformations and optimizations in the process of model conversion, to ensure better inference performance of the outcome. 
+
+Using the associated softwares, we have supported over 150 open source models from four deep learning frameworks including tensorflow 1.x and 2.x, pytorch, onnx, paddlepaddle. The application fields include CV, NLP, recommendation, speech, OCR, multimodel. Most of the models achieve 2x inference performance compared to Nvidia GPU T4. 
 
 # Contact us
-If you are interested in further information about the product, please contact the email: johnson@streamcomputing.com
+If you are interested in further information about the product, please contact the email: johnson@streamcomputing.com 
 
