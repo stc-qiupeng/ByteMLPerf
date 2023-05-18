@@ -86,6 +86,7 @@ class RuntimeBackendCPU(runtime_backend.RuntimeBackend):
                 dic = {}
                 for i, key in enumerate(self.outputs):
                     dic[key] = list(results)[i]
+                return dic
             else:
                 results = {self.outputs[0]: results.cpu().numpy()}
         else:
