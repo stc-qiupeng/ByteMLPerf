@@ -83,10 +83,10 @@ class DataLoader(data_loader.Dataset):
         self.labels = []
         for i in tqdm(range(self.batch_num)):
             split_data = {
-                'input_segment:0':
+                'Input-Segment':
                 self.feed_dict["batch_segment_ids"][i * self.cur_bs:(i + 1) *
                                                     self.cur_bs],
-                'input_token:0':
+                'Input-Token':
                 self.feed_dict["batch_token_ids"][i * self.cur_bs:(i + 1) *
                                                   self.cur_bs],
             }

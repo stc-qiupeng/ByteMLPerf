@@ -16,6 +16,24 @@
     },
     "widedeep-tf-fp32": {
         "best_batch": 2048
+    },
+    "roformer-tf-fp32": {
+        "best_batch": 2
+    },
+    "gpt2-torch-fp32": {
+        "best_batch": 4
+    },
+    "clip-onnx-fp32": {
+        "best_batch": 4
+    },
+    "swin-large-torch-fp32": {
+        "best_batch": 1
+    },
+    "unet-onnx-fp32": {
+        "best_batch": 2
+    },
+    "vae-decoder-onnx-fp32": {
+        "best_batch": 4
     }
 }
 

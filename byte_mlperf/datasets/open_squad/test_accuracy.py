@@ -99,8 +99,8 @@ class AccuracyChecker(test_accuracy.AccuracyChecker):
             #     (start_logits, end_logits) = (inputs[0][0].cpu().detach().numpy(), inputs[1][0].cpu().detach().numpy())
             # else:
             if ('bert-torch-fp32' or 'roberta' in self.configs['model']) and self.runtime_backend.hardware_type == 'CPU':
-                (start_logits, end_logits) = (inputs[0].cpu().detach().numpy(),
-                                              inputs[1].cpu().detach().numpy())
+                (start_logits, end_logits) = (inputs["start_logits"].cpu().detach().numpy(),
+                                              inputs["end_logits"].cpu().detach().numpy())
             else:
                 if isinstance(inputs, dict):
                     (start_logits, end_logits) = (inputs["start_logits"],
